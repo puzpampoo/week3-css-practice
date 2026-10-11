@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Exercise 7: Create a centered profile card with rounded corners and a shadow.">
+  <title>Exercise 7: Profile Card | CSS Basics Practice</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body id="top">
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <p>WEEK 3 · CSS BASICS PRACTICE</p>
+      <h1>Exercise 7: Profile Card</h1>
+      <p>Student: <strong>Alisha Mamedova</strong></p>
+      <nav class="site-nav" aria-label="Main navigation">
+      <a href="../index.html">Home</a>
+      <a href="../beginner/ex1.html">Beginner</a>
+      <a href="../intermediate/ex6.html">Intermediate</a>
+      <a href="../challenging/ex11.html">Challenging</a>
+    </nav>
+    </div>
+  </header>
+  <main class="page-main" id="main-content">
+    <p class="breadcrumb"><a href="../index.html">Home</a> / Intermediate / Exercise 7</p>
+    <article>
+      <section class="panel" aria-labelledby="description-heading">
+        <h2 id="description-heading">What this exercise demonstrates</h2>
+        <p>Create a centered profile card with rounded corners and a shadow.</p>
+      </section>
+      <section aria-labelledby="result-heading">
+        <h2 id="result-heading">Live result</h2>
+        <div class="demo-panel">
+          <article class="profile-card"><div class="avatar" role="img" aria-label="Simple illustrated avatar">AM</div><h3>Alisha Mamedova</h3><p>Student · Web learner</p></article>
+        </div>
+      </section>
+      <section class="code-panel" aria-labelledby="html-heading">
+        <h2 id="html-heading">HTML code</h2>
+        <pre><code>&lt;article class=&quot;profile-card&quot;&gt;
+  &lt;div class=&quot;avatar&quot; role=&quot;img&quot; aria-label=&quot;Simple illustrated avatar&quot;&gt;AM&lt;/div&gt;
+  &lt;h3&gt;Alisha Mamedova&lt;/h3&gt;
+  &lt;p&gt;Student · Web learner&lt;/p&gt;
+&lt;/article&gt;</code></pre>
+      </section>
+      <section class="code-panel" aria-labelledby="css-heading">
+        <h2 id="css-heading">CSS used</h2>
+        <pre><code>.profile-card { max-width: 260px; margin: 1rem auto; padding: 1.5rem; text-align: center; border-radius: 16px; box-shadow: 0 4px 14px #0002; }
+.avatar { margin: auto; }</code></pre>
+        <p>The full styles for all exercises are saved in <code>css/styles.css</code>.</p>
+      </section>
+    </article>
+    <nav aria-label="Exercise navigation">
+      <a class="pill-link" href="../index.html">← Back to all exercises</a>
+      <a class="pill-link" href="ex6.html">Previous exercise</a>
+      <a class="pill-link" href="ex8.html">Next exercise →</a>
+    </nav>
+  </main>
+  <footer class="site-footer"><p>Alisha Mamedova · CSS Basics Practice · Exercise 7 of 15</p></footer>
+</body>
+</html>

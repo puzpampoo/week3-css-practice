@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Exercise 5: Make a navigation link turn red when a visitor hovers over it.">
+  <title>Exercise 5: Link Hover Effect | CSS Basics Practice</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body id="top">
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <p>WEEK 3 · CSS BASICS PRACTICE</p>
+      <h1>Exercise 5: Link Hover Effect</h1>
+      <p>Student: <strong>Alisha Mamedova</strong></p>
+      <nav class="site-nav" aria-label="Main navigation">
+      <a href="../index.html">Home</a>
+      <a href="../beginner/ex1.html">Beginner</a>
+      <a href="../intermediate/ex6.html">Intermediate</a>
+      <a href="../challenging/ex11.html">Challenging</a>
+    </nav>
+    </div>
+  </header>
+  <main class="page-main" id="main-content">
+    <p class="breadcrumb"><a href="../index.html">Home</a> / Beginner / Exercise 5</p>
+    <article>
+      <section class="panel" aria-labelledby="description-heading">
+        <h2 id="description-heading">What this exercise demonstrates</h2>
+        <p>Make a navigation link turn red when a visitor hovers over it.</p>
+      </section>
+      <section aria-labelledby="result-heading">
+        <h2 id="result-heading">Live result</h2>
+        <div class="demo-panel">
+          <nav class="ex5-nav"><a href="#example">Hover over this link</a></nav><p id="example">The link changes color when hovered.</p>
+        </div>
+      </section>
+      <section class="code-panel" aria-labelledby="html-heading">
+        <h2 id="html-heading">HTML code</h2>
+        <pre><code>&lt;nav class=&quot;ex5-nav&quot;&gt;&lt;a href=&quot;#example&quot;&gt;Hover over this link&lt;/a&gt;&lt;/nav&gt;</code></pre>
+      </section>
+      <section class="code-panel" aria-labelledby="css-heading">
+        <h2 id="css-heading">CSS used</h2>
+        <pre><code>.ex5-nav a:hover { color: red; }</code></pre>
+        <p>The full styles for all exercises are saved in <code>css/styles.css</code>.</p>
+      </section>
+    </article>
+    <nav aria-label="Exercise navigation">
+      <a class="pill-link" href="../index.html">← Back to all exercises</a>
+      <a class="pill-link" href="ex4.html">Previous exercise</a>
+      
+    </nav>
+  </main>
+  <footer class="site-footer"><p>Alisha Mamedova · CSS Basics Practice · Exercise 5 of 15</p></footer>
+</body>
+</html>

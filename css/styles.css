@@ -1,0 +1,131 @@
+/* Week 3 — CSS Basics Practice
+   Shared site styles and exercise demonstrations */
+
+/* Base styles */
+:root {
+  color-scheme: light dark;
+  --page-bg: #f7f4ef;
+  --surface: #ffffff;
+  --text: #242424;
+  --muted: #5d5d5d;
+  --accent: #6b3f69;
+  --border: #d8d0d5;
+  --focus: #005fcc;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--page-bg);
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+a { color: #56305c; }
+a:hover { text-decoration-thickness: 2px; }
+a:focus-visible, button:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 3px;
+}
+.skip-link {
+  position: absolute; left: -9999px; top: 0;
+  padding: .75rem; background: #fff; color: #000; z-index: 1000;
+}
+.skip-link:focus { left: .75rem; top: .75rem; }
+.site-header { background: #e9dce8; padding: 1.5rem; border-bottom: 1px solid var(--border); }
+.site-header-inner, .page-main, .site-footer { max-width: 1000px; margin: 0 auto; }
+.site-header h1 { margin: 0; line-height: 1.2; }
+.site-header p { margin-bottom: 0; }
+.site-nav { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: 1rem; }
+.site-nav a, .pill-link {
+  display: inline-block; padding: .45rem .75rem; border: 1px solid #b9a4b9;
+  border-radius: .5rem; background: var(--surface); text-decoration: none;
+}
+.page-main { padding: 1.5rem; min-height: 70vh; }
+.panel, .exercise-card, .demo-panel, .code-panel {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: .8rem; padding: 1rem; margin: 1rem 0;
+}
+.exercise-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
+.exercise-card { margin: 0; }
+.exercise-card h3 { margin-top: 0; }
+.site-footer { padding: 1.25rem 1.5rem; color: var(--muted); border-top: 1px solid var(--border); }
+.breadcrumb { margin-bottom: 1rem; }
+.demo-panel { overflow-wrap: anywhere; }
+pre { overflow-x: auto; padding: 1rem; border-radius: .5rem; background: #24212a; color: #f8f3fa; font-size: .9rem; }
+code { font-family: Consolas, "Courier New", monospace; }
+.back-link { display: inline-block; margin-top: .5rem; }
+button { font: inherit; cursor: pointer; }
+
+/* Exercise 1: Text Styling */
+.ex1-text { color: blue; font-size: 18px; font-family: Arial, sans-serif; }
+/* Exercise 2: Class Selector */
+.highlight { background-color: yellow; color: #222; }
+/* Exercise 3: Box Model */
+.ex3-box { width: 200px; max-width: 100%; padding: 10px; border: 2px solid black; margin: 20px; background: #f3e8ff; }
+/* Exercise 4: Color formats */
+.ex4-hex { color: #ff5733; }
+.ex4-rgb { color: rgb(0, 128, 255); }
+.ex4-hsl { color: hsl(120, 60%, 40%); }
+/* Exercise 5: Link hover */
+.ex5-nav a { display: inline-block; padding: .5rem; }
+.ex5-nav a:hover { color: red; }
+/* Exercise 6: Fixed button */
+.back-to-top { position: fixed; right: 20px; bottom: 20px; padding: 10px 14px; border-radius: 999px; background: #56305c; color: white; text-decoration: none; box-shadow: 0 3px 10px #0003; }
+/* Exercise 7: Profile card */
+.profile-card { max-width: 260px; margin: 1rem auto; padding: 1.5rem; text-align: center; border: 1px solid var(--border); border-radius: 16px; box-shadow: 0 4px 14px #0002; }
+.avatar { display: grid; place-items: center; width: 76px; height: 76px; border-radius: 50%; background: #e9dce8; color: #39213d; font-size: 1.5rem; font-weight: bold; }
+.profile-card .avatar { margin: 0 auto; }
+/* Exercise 8: Flexbox navigation */
+.ex8-nav { display: flex; justify-content: space-evenly; align-items: center; flex-wrap: wrap; gap: 1rem; padding: 1rem; background: #e9dce8; border-radius: .5rem; }
+.ex8-nav a { padding: .25rem .5rem; }
+/* Exercise 9: Grid layout */
+.ex9-layout { display: grid; grid-template-columns: 3fr 7fr; gap: 1rem; }
+.ex9-layout aside, .ex9-layout section { padding: 1rem; border-radius: .5rem; background: #e9dce8; }
+/* Exercise 10: Media queries */
+.ex10-demo h2 { font-size: 2rem; }
+/* Exercise 11: Flexbox gallery */
+.ex11-gallery { display: flex; flex-wrap: wrap; gap: 1rem; }
+.gallery-tile { display: grid; place-items: center; min-height: 130px; flex: 1 1 calc(25% - 1rem); border-radius: .7rem; background: #e9dce8; border: 1px solid #b9a4b9; font-weight: bold; }
+.tile-two { background: #dcefe4; } .tile-three { background: #f4e6cf; } .tile-four { background: #e1e8f8; }
+/* Exercise 12: Sticky header */
+.ex12-demo { max-height: 260px; overflow-y: auto; border: 1px solid var(--border); border-radius: .5rem; }
+.sticky-demo-header { position: sticky; top: 0; padding: 1rem; background: #56305c; color: white; font-weight: bold; }
+.ex12-demo p, .ex12-long { padding: 0 1rem; }
+/* Exercise 13: Animated button */
+.ex13-button { padding: .8rem 1.2rem; border: 0; border-radius: .5rem; background: #6b3f69; color: white; transition: background-color .5s, transform .5s; }
+.ex13-button:hover { background-color: #c72e62; transform: translateY(-3px); }
+/* Exercise 14: Grid landing page */
+.ex14-landing { display: grid; grid-template-columns: 1fr 3fr; grid-template-areas: "header header" "sidebar main" "footer footer"; gap: 1rem; }
+.ex14-landing > header, .ex14-landing > aside, .ex14-landing > main, .ex14-landing > footer { padding: 1rem; background: #e9dce8; border: 1px solid #b9a4b9; border-radius: .5rem; }
+.ex14-landing > header { grid-area: header; } .ex14-landing > aside { grid-area: sidebar; }
+.ex14-landing > main { grid-area: main; } .ex14-landing > footer { grid-area: footer; }
+/* Exercise 15: Responsive cards */
+.ex15-cards { display: flex; gap: 1rem; }
+.info-card { flex: 1; padding: 1rem; border: 1px solid var(--border); border-radius: .7rem; background: var(--surface); }
+.info-card h3 { margin-top: 0; }
+
+/* Dark mode follows the visitor's device preference */
+@media (prefers-color-scheme: dark) {
+  :root { --page-bg: #19171b; --surface: #252228; --text: #f4eff5; --muted: #c2b9c5; --border: #49414c; }
+  .site-header { background: #302734; }
+  a { color: #e7bde9; }
+  .site-nav a, .pill-link { background: #252228; border-color: #635369; }
+  .ex3-box { background: #33283d; color: #fff; border-color: #eee; }
+  .ex8-nav, .ex9-layout aside, .ex9-layout section, .gallery-tile,
+  .ex14-landing > header, .ex14-landing > aside, .ex14-landing > main, .ex14-landing > footer { background: #302734; border-color: #635369; }
+  .avatar { background: #49384d; color: #fff; }
+}
+@media (max-width: 800px) {
+  .exercise-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 600px) {
+  .site-header, .page-main { padding: 1rem; }
+  .exercise-grid { grid-template-columns: 1fr; }
+  .ex10-demo h2 { font-size: 1.25rem; }
+  .ex9-layout { grid-template-columns: 1fr; }
+  .gallery-tile { flex-basis: calc(50% - 1rem); }
+  .ex14-landing { grid-template-columns: 1fr; grid-template-areas: "header" "sidebar" "main" "footer"; }
+  .ex15-cards { flex-direction: column; }
+  .back-to-top { right: 12px; bottom: 12px; }
+}
